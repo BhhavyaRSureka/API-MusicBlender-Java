@@ -1,0 +1,11 @@
+koreUserId,botId,userCode,accountId,Authorization,paymentId,updateTransferType,customerId,statusCode
+user1,botA,code1,acc1,auth1,1001,credit,101,200
+user2,botB,code2,acc2,auth2,1002,debit,102,201
+user3,botC,code3,acc3,auth3,1003,credit,103,202
+user4,botD,code4,acc4,auth4,1004,debit,104,203
+user5,botE,code5,acc5,auth5,1005,credit,105,204
+user6,botF,code6,acc6,auth6,1006,debit,106,205
+user7,botG,code7,acc7,auth7,1007,credit,107,206
+user8,botH,code8,acc8,auth8,1008,debit,108,207
+user9,botI,code9,acc9,auth9,1009,credit,109,208
+user10,botJ,code10,acc10,auth10,1010,debit,110,209

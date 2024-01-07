@@ -1,0 +1,11 @@
+koreUserId,botId,accountId,Authorization,X-Auth-token,X-CORRELATION-ID,customerId,accountNumber,numOfTransactions,status,startDate,endDate,sort,transactionAmount,category,debitOrCredit,statusCode
+user1,bot1,acc1,auth1,token1,12345,cust1,accNum1,10,active,2020-01-01,2020-12-31,asc,1000,grocery,debit,200
+user2,bot2,acc2,auth2,token2,12346,cust2,accNum2,20,inactive,2020-02-01,2020-11-30,desc,2000,electronics,credit,201
+user3,bot3,acc3,auth3,token3,12347,cust3,accNum3,30,active,2020-03-01,2020-10-31,asc,3000,clothing,debit,202
+user4,bot4,acc4,auth4,token4,12348,cust4,accNum4,40,inactive,2020-04-01,2020-09-30,desc,4000,automotive,credit,203
+user5,bot5,acc5,auth5,token5,12349,cust5,accNum5,50,active,2020-05-01,2020-08-31,asc,5000,health,debit,204
+user6,bot6,acc6,auth6,token6,12350,cust6,accNum6,60,inactive,2020-06-01,2020-07-31,desc,6000,beauty,credit,205
+user7,bot7,acc7,auth7,token7,12351,cust7,accNum7,70,active,2020-07-01,2020-06-30,asc,7000,sports,debit,206
+user8,bot8,acc8,auth8,token8,12352,cust8,accNum8,80,inactive,2020-08-01,2020-05-31,desc,8000,home,credit,207
+user9,bot9,acc9,auth9,token9,12353,cust9,accNum9,90,active,2020-09-01,2020-04-30,asc,9000,garden,debit,208
+user10,bot10,acc10,auth10,token10,12354,cust10,accNum10,100,inactive,2020-10-01,2020-03-31,desc,10000,books,credit,209

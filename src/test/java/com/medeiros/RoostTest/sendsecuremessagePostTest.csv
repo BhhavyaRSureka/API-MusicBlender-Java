@@ -1,0 +1,11 @@
+Authorization,authType,firstName,lastName,email,phoneNumber,topic,message,availableTime,chatHistory,cif,statusCode
+Bearer token,OAuth2,John,Doe,johndoe@example.com,1234567890,Account,Need assistance with my account,9:00 AM - 5:00 PM,Hello John, How can I assist you?,12345,200
+Bearer token,OAuth2,Jane,Smith,janesmith@example.com,0987654321,Billing,Inquiry about my bill,10:00 AM - 6:00 PM,Hello Jane, How can I help you?,67890,200
+Bearer token,OAuth2,Robert,Brown,robertbrown@example.com,1122334455,Technical,Having trouble with the app,8:00 AM - 4:00 PM,Hello Robert, How can I aid you?,11223,200
+Bearer token,OAuth2,Laura,Johnson,laurajohnson@example.com,9988776655,Account,Need to change my password,11:00 AM - 7:00 PM,Hello Laura, How can I assist you?,44556,200
+Bearer token,OAuth2,Michael,Williams,michaelwilliams@example.com,8877665544,Billing,Want to update my billing info,9:30 AM - 5:30 PM,Hello Michael, How can I help you?,77889,200
+Bearer token,OAuth2,Emma,Jones,emmajones@example.com,7766554433,Technical,App is not responding,10:30 AM - 6:30 PM,Hello Emma, How can I aid you?,11222,200
+Bearer token,OAuth2,David,Taylor,davidtaylor@example.com,6655443322,Account,Can't access my account,8:30 AM - 4:30 PM,Hello David, How can I assist you?,33445,200
+Bearer token,OAuth2,Sophia,Anderson,sophiaanderson@example.com,5544332211,Billing,Need to understand my bill,11:30 AM - 7:30 PM,Hello Sophia, How can I help you?,55666,200
+Bearer token,OAuth2,James,Thomas,jamesthomas@example.com,4433221100,Technical,App keeps crashing,9:00 AM - 5:00 PM,Hello James, How can I aid you?,77880,200
+Bearer token,OAuth2,Olivia,Jackson,oliviajackson@example.com,3322110099,Account,Need to update my profile info,10:00 AM - 6:00 PM,Hello Olivia, How can I assist you?,99001,200
