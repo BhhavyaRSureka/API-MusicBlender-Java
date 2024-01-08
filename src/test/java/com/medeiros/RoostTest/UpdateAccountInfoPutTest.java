@@ -13,7 +13,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class UpdateAccountInfoPutTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\UpdateAccountInfoPutTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/UpdateAccountInfoPutTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -48,12 +49,6 @@ public class UpdateAccountInfoPutTest {
                 
   
                 Response response = given()
-				.pathParam("koreUserId", map.get("koreUserId") != null ? map.get("koreUserId") : "")
-				.pathParam("botId", map.get("botId") != null ? map.get("botId") : "")
-				.pathParam("accountId", map.get("accountId") != null ? map.get("accountId") : "")
-				.pathParam("Authorization", map.get("Authorization") != null ? map.get("Authorization") : "")
-				.pathParam("X-Auth-token", map.get("X-Auth-token") != null ? map.get("X-Auth-token") : "")
-				.pathParam("X-CORRELATION-ID", map.get("X-CORRELATION-ID") != null ? map.get("X-CORRELATION-ID") : "")
 				.contentType(ContentType.JSON)
 				.body("{\n"+
 					"  \"accountNumber\": \"" + (map.get("accountNumber") != null ? map.get("accountNumber") : "") + "\",\n" +

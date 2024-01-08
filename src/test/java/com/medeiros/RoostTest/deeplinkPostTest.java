@@ -13,7 +13,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class deeplinkPostTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\deeplinkPostTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/deeplinkPostTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -48,13 +49,6 @@ public class deeplinkPostTest {
                 
   
                 Response response = given()
-				.pathParam("koreUserId", map.get("koreUserId") != null ? map.get("koreUserId") : "")
-				.pathParam("botId", map.get("botId") != null ? map.get("botId") : "")
-				.pathParam("accountId", map.get("accountId") != null ? map.get("accountId") : "")
-				.pathParam("tenantId", map.get("tenantId") != null ? map.get("tenantId") : "")
-				.pathParam("Authorization", map.get("Authorization") != null ? map.get("Authorization") : "")
-				.pathParam("environment", map.get("environment") != null ? map.get("environment") : "")
-				.pathParam("channel", map.get("channel") != null ? map.get("channel") : "")
 				.contentType(ContentType.JSON)
 				.body("{\n"+
 					"  \"usecase\": \"" + (map.get("usecase") != null ? map.get("usecase") : "") + "\n" +

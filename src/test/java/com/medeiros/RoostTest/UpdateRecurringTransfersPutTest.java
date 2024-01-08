@@ -13,7 +13,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class UpdateRecurringTransfersPutTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\UpdateRecurringTransfersPutTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/UpdateRecurringTransfersPutTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -48,11 +49,6 @@ public class UpdateRecurringTransfersPutTest {
                 
   
                 Response response = given()
-				.pathParam("koreUserId", map.get("koreUserId") != null ? map.get("koreUserId") : "")
-				.pathParam("botId", map.get("botId") != null ? map.get("botId") : "")
-				.pathParam("userCode", map.get("userCode") != null ? map.get("userCode") : "")
-				.pathParam("accountId", map.get("accountId") != null ? map.get("accountId") : "")
-				.pathParam("Authorization", map.get("Authorization") != null ? map.get("Authorization") : "")
 				.contentType(ContentType.JSON)
 				.body("{\n"+
 					"  \"paymentId\": \"" + (map.get("paymentId") != null ? map.get("paymentId") : "") + "\",\n" +
