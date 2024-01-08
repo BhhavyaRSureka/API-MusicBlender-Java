@@ -1,0 +1,11 @@
+id,initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+123e4567-e89b-12d3-a456-426614174000,JH,John,Henry,Doe,1980-08-15,New York,+12025551234,john.doe@example.com,10001,123,A,US,REF001,200
+223e4567-e89b-12d3-a456-426614174001,RS,Richard,Stallman,Smith,1975-09-10,Los Angeles,+13235551234,richard.smith@example.com,90001,456,B,US,REF002,200
+323e4567-e89b-12d3-a456-426614174002,ML,Mary,Lou,Johnson,1990-05-20,Chicago,+13125551234,mary.johnson@example.com,60629,789,C,US,REF003,200
+423e4567-e89b-12d3-a456-426614174003,AR,Alice,Robertson,Brown,1985-12-30,Houston,+17135551234,alice.brown@example.com,77001,101,D,US,REF004,200
+523e4567-e89b-12d3-a456-426614174004,JC,James,Charles,Miller,1995-07-15,Philadelphia,+12675551234,james.miller@example.com,19104,202,E,US,REF005,200
+623e4567-e89b-12d3-a456-426614174005,PR,Patricia,Rose,Davis,1982-03-25,Phoenix,+16025551234,patricia.davis@example.com,85001,303,F,US,REF006,200
+723e4567-e89b-12d3-a456-426614174006,GM,Gary,Morgan,Garcia,1978-11-05,San Antonio,+12105551234,gary.garcia@example.com,78201,404,G,US,REF007,200
+823e4567-e89b-12d3-a456-426614174007,SR,Susan,Rachel,Rodriguez,1988-06-10,San Diego,+16195551234,susan.rodriguez@example.com,92101,505,H,US,REF008,200
+923e4567-e89b-12d3-a456-426614174008,TL,Tom,Lee,Wilson,1992-02-20,Dallas,+14695551234,tom.wilson@example.com,75201,606,I,US,REF009,200
+023e4567-e89b-12d3-a456-426614174009,WM,William,Matthew,Martinez,1970-01-01,San Jose,+14085551234,william.martinez@example.com,95101,707,J,US,REF010,200

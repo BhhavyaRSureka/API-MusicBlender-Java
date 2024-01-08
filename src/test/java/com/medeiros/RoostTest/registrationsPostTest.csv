@@ -1,0 +1,11 @@
+id,reference,startDate,endDate,credentialUrl,statusCode
+1a2b3c4d5e,REF123,2022-01-01,2022-12-31,http://example.com/1,200
+2b3c4d5e6f,REF124,2023-01-01,2023-12-31,http://example.com/2,201
+3c4d5e6f7g,REF125,2024-01-01,2024-12-31,http://example.com/3,202
+4d5e6f7g8h,REF126,2025-01-01,2025-12-31,http://example.com/4,203
+5e6f7g8h9i,REF127,2026-01-01,2026-12-31,http://example.com/5,204
+6f7g8h9i0j,REF128,2027-01-01,2027-12-31,http://example.com/6,205
+7g8h9i0j1k,REF129,2028-01-01,2028-12-31,http://example.com/7,206
+8h9i0j1k2l,REF130,2029-01-01,2029-12-31,http://example.com/8,207
+9i0j1k2l3m,REF131,2030-01-01,2030-12-31,http://example.com/9,208
+0j1k2l3m4n,REF132,2031-01-01,2031-12-31,http://example.com/10,209

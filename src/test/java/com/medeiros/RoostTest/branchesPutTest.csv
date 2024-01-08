@@ -1,0 +1,11 @@
+cocNumber,cocBranchNumber,city,tradeName,phone,email,statusCode
+001,01,New York,ABC Corp,1234567890,abc.corp@xyz.com,Active
+002,02,Los Angeles,DEF Corp,2345678901,def.corp@xyz.com,Inactive
+003,03,Chicago,GHI Corp,3456789012,ghi.corp@xyz.com,Active
+004,04,Houston,JKL Corp,4567890123,jkl.corp@xyz.com,Active
+005,05,Phoenix,MNO Corp,5678901234,mno.corp@xyz.com,Inactive
+006,06,Philadelphia,PQR Corp,6789012345,pqr.corp@xyz.com,Active
+007,07,San Antonio,STU Corp,7890123456,stu.corp@xyz.com,Active
+008,08,San Diego,VWX Corp,8901234567,vwx.corp@xyz.com,Inactive
+009,09,Dallas,YZA Corp,9012345678,yza.corp@xyz.com,Active
+010,10,San Jose,BCD Corp,0123456789,bcd.corp@xyz.com,Active

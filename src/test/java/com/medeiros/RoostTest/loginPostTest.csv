@@ -1,0 +1,11 @@
+email,otp,client,statusCode
+john.doe@example.com,123456,clientA,200
+jane.doe@example.com,654321,clientB,201
+mary.jane@example.com,789012,clientC,202
+peter.parker@example.com,210987,clientD,203
+tony.stark@example.com,345678,clientE,204
+bruce.wayne@example.com,876543,clientF,205
+clark.kent@example.com,901234,clientG,206
+diana.prince@example.com,432109,clientH,207
+steve.rogers@example.com,567890,clientI,208
+natasha.romanoff@example.com,098765,clientJ,209
