@@ -66,7 +66,7 @@ public class meGetTest {
           }
     
               if (response.jsonPath().get("name") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("name"), instanceOf(String.class));  
           }

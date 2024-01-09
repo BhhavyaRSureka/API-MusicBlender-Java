@@ -68,7 +68,7 @@ public class authorizationsGetTest {
           }
     
               if (response.jsonPath().get("authorizations[" + i + "].name") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("authorizations[" + i + "].name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("authorizations[" + i + "].name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("authorizations[" + i + "].name"), instanceOf(String.class));  
           }

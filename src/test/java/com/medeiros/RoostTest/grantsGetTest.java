@@ -87,7 +87,7 @@ public class grantsGetTest {
           }
     
               if (response.jsonPath().get("grants[" + i + "].account.name") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("grants[" + i + "].account.name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("grants[" + i + "].account.name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("grants[" + i + "].account.name"), instanceOf(String.class));  
           }

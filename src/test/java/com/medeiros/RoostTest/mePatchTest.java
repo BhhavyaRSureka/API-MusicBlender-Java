@@ -52,7 +52,7 @@ public class mePatchTest {
 				.body("{\n"+
 					"  \"name\": \"" + (map.get("name") != null ? map.get("name") : "") + "\",\n" +
 					"  \"image\": \"" + (map.get("image") != null ? map.get("image") : "") + "\",\n" +
-					"  \"settings\": \"" + (map.get("settings") != null ? map.get("settings") : "") + "\n" +
+					"  \"settings\": \"" + (map.get("settings") != null ? map.get("settings") : "") + "\"\n" +
  				"}")
 				.header("Token", System.getenv("API_KEY"))
                 .when()
@@ -72,7 +72,7 @@ public class mePatchTest {
           }
     
               if (response.jsonPath().get("name") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("name"), instanceOf(String.class));  
           }

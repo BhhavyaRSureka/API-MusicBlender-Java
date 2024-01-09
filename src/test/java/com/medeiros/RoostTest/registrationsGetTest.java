@@ -113,7 +113,7 @@ public class registrationsGetTest {
           }
     
               if (response.jsonPath().get("registrations[" + i + "].recipient.name") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("registrations[" + i + "].recipient.name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("registrations[" + i + "].recipient.name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("registrations[" + i + "].recipient.name"), instanceOf(String.class));  
           }

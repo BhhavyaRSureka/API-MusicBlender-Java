@@ -50,7 +50,7 @@ public class accountsPostTest {
                 Response response = given()
 				.contentType(ContentType.JSON)
 				.body("{\n"+
-					"  \"email\": \"" + (map.get("email") != null ? map.get("email") : "") + "\n" +
+					"  \"email\": \"" + (map.get("email") != null ? map.get("email") : "") + "\"\n" +
  				"}")
                 .when()
                 .post("/accounts")  

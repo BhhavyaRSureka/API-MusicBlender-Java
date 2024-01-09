@@ -74,19 +74,19 @@ public class personsGetTest {
           }
     
               if (response.jsonPath().get("persons[" + i + "].firstName") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].firstName"), matchesPattern("^[p{L} .'-]{1,50}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].firstName"), matchesPattern("^[\\p{L} .'-]{1,50}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("persons[" + i + "].firstName"), instanceOf(String.class));  
           }
     
               if (response.jsonPath().get("persons[" + i + "].middleName") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].middleName"), matchesPattern("^[p{L} .'-]{1,20}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].middleName"), matchesPattern("^[\\p{L} .'-]{1,20}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("persons[" + i + "].middleName"), instanceOf(String.class));  
           }
     
               if (response.jsonPath().get("persons[" + i + "].lastName") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].lastName"), matchesPattern("^[p{L} .'-]{2,50}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].lastName"), matchesPattern("^[\\p{L} .'-]{2,50}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("persons[" + i + "].lastName"), instanceOf(String.class));  
           }
@@ -96,7 +96,7 @@ public class personsGetTest {
           }
     
               if (response.jsonPath().get("persons[" + i + "].birthPlace") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].birthPlace"), matchesPattern("^[p{L} .,'-]{2,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("persons[" + i + "].birthPlace"), matchesPattern("^[\\p{L} .,'-]{2,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("persons[" + i + "].birthPlace"), instanceOf(String.class));  
           }

@@ -50,7 +50,7 @@ public class authorizationsPostTest {
                 Response response = given()
 				.contentType(ContentType.JSON)
 				.body("{\n"+
-					"  \"email\": \"" + (map.get("email") != null ? map.get("email") : "") + "\n" +
+					"  \"email\": \"" + (map.get("email") != null ? map.get("email") : "") + "\"\n" +
  				"}")
 				.header("Token", System.getenv("API_KEY"))
                 .when()
@@ -66,13 +66,13 @@ public class authorizationsPostTest {
           }
     
               if (response.jsonPath().get("name") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("name"), instanceOf(String.class));  
           }
     
               if (response.jsonPath().get("email") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().getString("email"), matchesPattern("^(([^<>()[]\\.,;:\s@\"]+(.[^<>()[]\\.,;:\s@\"]+)*)|(\".+\"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("email"), matchesPattern("^(([^<>()\\[\\]\\.,;:\s@\"]+(.[^<>()\\[\\]\\.,;:\s@\"]+)*)|(\".+\"))@((([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}))|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("email"), instanceOf(String.class));MatcherAssert.assertThat(
                   response.jsonPath().getString("email"),

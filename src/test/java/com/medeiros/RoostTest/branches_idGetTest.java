@@ -77,13 +77,13 @@ public class branches_idGetTest {
           }
     
               if (response.jsonPath().get("cocNumber") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("cocNumber"), matchesPattern("^d{8}$")); 
+                //MatcherAssert.assertThat(response.jsonPath().getString("cocNumber"), matchesPattern("^\\d{8}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("cocNumber"), instanceOf(String.class));  
           }
     
               if (response.jsonPath().get("cocBranchNumber") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("cocBranchNumber"), matchesPattern("^d{12}$")); 
+                //MatcherAssert.assertThat(response.jsonPath().getString("cocBranchNumber"), matchesPattern("^\\d{12}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("cocBranchNumber"), instanceOf(String.class));  
           }
@@ -100,7 +100,7 @@ public class branches_idGetTest {
           }
     
               if (response.jsonPath().get("eoriNumber") != null) {  
-                //MatcherAssert.assertThat(response.jsonPath().getString("eoriNumber"), matchesPattern("^NLd{9}$")); 
+                //MatcherAssert.assertThat(response.jsonPath().getString("eoriNumber"), matchesPattern("^NL\\d{9}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("eoriNumber"), instanceOf(String.class));  
           }

@@ -54,7 +54,7 @@ public class registrations_idPatchTest {
 					"  \"reference\": \"" + (map.get("reference") != null ? map.get("reference") : "") + "\",\n" +
 					"  \"revoked\": \"" + (map.get("revoked") != null ? map.get("revoked") : "") + "\",\n" +
 					"  \"suspendedUntil\": \"" + (map.get("suspendedUntil") != null ? map.get("suspendedUntil") : "") + "\",\n" +
-					"  \"endDate\": \"" + (map.get("endDate") != null ? map.get("endDate") : "") + "\n" +
+					"  \"endDate\": \"" + (map.get("endDate") != null ? map.get("endDate") : "") + "\"\n" +
  				"}")
 				.header("Token", System.getenv("API_KEY"))
                 .when()
@@ -115,7 +115,7 @@ public class registrations_idPatchTest {
           }
     
               if (response.jsonPath().get("recipient.name") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().getString("recipient.name"), matchesPattern("^[p{L} .'-]{1,100}$")); 
+                MatcherAssert.assertThat(response.jsonPath().getString("recipient.name"), matchesPattern("^[\\p{L} .'-]{1,100}$")); 
 
                 MatcherAssert.assertThat(response.jsonPath().get("recipient.name"), instanceOf(String.class));  
           }
