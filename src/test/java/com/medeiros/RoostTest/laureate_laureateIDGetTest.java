@@ -32,7 +32,7 @@ public class laureate_laureateIDGetTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\laureate_laureateIDGetTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/laureate_laureateIDGetTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -60,7 +60,7 @@ public class laureate_laureateIDGetTest {
               if (response.jsonPath().get("laureate") != null) {    
               if (response.jsonPath().get("laureate.id") != null) {
                 MatcherAssert.assertThat(response.jsonPath().get("laureate.id"), instanceOf(Integer.class));  
-                MatcherAssert.assertThat(response.jsonPath().getDouble("laureate.id"), greaterThanOrEqualTo(1));
+                MatcherAssert.assertThat(response.jsonPath().getDouble("laureate.id"), greaterThanOrEqualTo(1.0));
   
           }
     
@@ -761,20 +761,20 @@ public class laureate_laureateIDGetTest {
     
               if (response.jsonPath().get("laureate.links") != null) {    
                 for (int i = 0; i < response.jsonPath().getList("laureate.links").size(); i++) {    
-              if (response.jsonPath().get("laureate.links[`"+ i +"`].rel") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[`"+ i +"`].rel"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.links[" + i + "].rel") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[" + i + "].rel"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.links[`"+ i +"`].href") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[`"+ i +"`].href"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.links[" + i + "].href") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[" + i + "].href"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.links[`"+ i +"`].action") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[`"+ i +"`].action"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.links[" + i + "].action") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[" + i + "].action"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.links[`"+ i +"`].types") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[`"+ i +"`].types"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.links[" + i + "].types") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.links[" + i + "].types"), instanceOf(String.class));  
           }
     
                   }  
@@ -784,331 +784,331 @@ public class laureate_laureateIDGetTest {
     
               if (response.jsonPath().get("laureate.nobelPrizes") != null) {    
                 for (int i = 0; i < response.jsonPath().getList("laureate.nobelPrizes").size(); i++) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].awardYear") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].awardYear"), instanceOf(Integer.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].awardYear") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].awardYear"), instanceOf(Integer.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].category") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].category.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].category.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].categoryFullName.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].categoryFullName.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].sortOrder") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].sortOrder"), instanceOf(String.class));  
-                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[`"+ i +"`].sortOrder"), anyOf(equalTo("1"), equalTo("2"), equalTo("3")));
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].sortOrder") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].sortOrder"), instanceOf(String.class));  
+                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[" + i + "].sortOrder"), anyOf(equalTo("1"), equalTo("2"), equalTo("3")));
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].portion") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].portion"), instanceOf(String.class));  
-                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[`"+ i +"`].portion"), anyOf(equalTo("1"), equalTo("1/2"), equalTo("1/3"), equalTo("1/4")));
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].portion") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].portion"), instanceOf(String.class));  
+                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[" + i + "].portion"), anyOf(equalTo("1"), equalTo("1/2"), equalTo("1/3"), equalTo("1/4")));
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].dateAwarded") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].dateAwarded"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].dateAwarded") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].dateAwarded"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeStatus") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeStatus"), instanceOf(String.class));  
-                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[`"+ i +"`].prizeStatus"), anyOf(equalTo("received"), equalTo("declined"), equalTo("restricted")));
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeStatus") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeStatus"), instanceOf(String.class));  
+                MatcherAssert.assertThat(response.jsonPath().getString("laureate.nobelPrizes[" + i + "].prizeStatus"), anyOf(equalTo("received"), equalTo("declined"), equalTo("restricted")));
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].motivation.no"), instanceOf(String.class));  
-          }
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeAmount") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeAmount"), instanceOf(Integer.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeAmountAdjusted") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].prizeAmountAdjusted"), instanceOf(Integer.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations") != null) {    
-                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations").size(); i1++) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].name.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].motivation.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeAmount") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeAmount"), instanceOf(Integer.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeAmountAdjusted") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].prizeAmountAdjusted"), instanceOf(Integer.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nameNow.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations") != null) {    
+                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations").size(); i1++) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].name.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nativeName") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].nativeName"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].city.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nameNow.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nativeName") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].nativeName"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].country.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].city.no"), instanceOf(String.class));  
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].country.no"), instanceOf(String.class));  
+          }
+  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.sameAs") != null) {    
-                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.sameAs").size(); i11++) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.no"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.sameAs") != null) {    
+                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.sameAs").size(); i11++) {    
                   }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].cityNow.sameAs"), instanceOf(List.class));
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].cityNow.sameAs"), instanceOf(List.class));
   
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.no"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.sameAs") != null) {    
-                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.sameAs").size(); i11++) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.sameAs") != null) {    
+                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.sameAs").size(); i11++) {    
                   }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].countryNow.sameAs"), instanceOf(List.class));
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].countryNow.sameAs"), instanceOf(List.class));
   
           }
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.en"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.se"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].affiliations[`"+ i1 +"`].locationString.no"), instanceOf(String.class));  
-          }
-  
-          }
-    
-                  }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].affiliations"), instanceOf(List.class));
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences") != null) {    
-                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences").size(); i1++) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].city.no"), instanceOf(String.class));  
-          }
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].country.no"), instanceOf(String.class));  
-          }
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.no"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.sameAs") != null) {    
-                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.sameAs").size(); i11++) {    
-                  }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].cityNow.sameAs"), instanceOf(List.class));
-  
-          }
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.no"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.sameAs") != null) {    
-                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.sameAs").size(); i11++) {    
-                  }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].countryNow.sameAs"), instanceOf(List.class));
-  
-          }
-  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString") != null) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.en") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.en"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.se") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.se"), instanceOf(String.class));  
-          }
-    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.no") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].residences[`"+ i1 +"`].locationString.no"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].affiliations[" + i1 + "].locationString.no"), instanceOf(String.class));  
           }
   
           }
     
                   }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].residences"), instanceOf(List.class));
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].affiliations"), instanceOf(List.class));
   
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links") != null) {    
-                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].links").size(); i1++) {    
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].rel") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].rel"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences") != null) {    
+                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences").size(); i1++) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.en"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].href") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].href"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.se"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].action") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].action"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].city.no"), instanceOf(String.class));  
+          }
+  
           }
     
-              if (response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].types") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[`"+ i +"`].links[`"+ i1 +"`].types"), instanceOf(String.class));  
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].country.no"), instanceOf(String.class));  
+          }
+  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.no"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.sameAs") != null) {    
+                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.sameAs").size(); i11++) {    
+                  }  
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].cityNow.sameAs"), instanceOf(List.class));
+  
+          }
+  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.no"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.sameAs") != null) {    
+                for (int i11 = 0; i11 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.sameAs").size(); i11++) {    
+                  }  
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].countryNow.sameAs"), instanceOf(List.class));
+  
+          }
+  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString") != null) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.en") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.en"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.se") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.se"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.no") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].residences[" + i1 + "].locationString.no"), instanceOf(String.class));  
+          }
+  
           }
     
                   }  
-                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[`"+ i +"`].links"), instanceOf(List.class));
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].residences"), instanceOf(List.class));
+  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].links") != null) {    
+                for (int i1 = 0; i1 < response.jsonPath().getList("laureate.nobelPrizes[" + i + "].links").size(); i1++) {    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].rel") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].rel"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].href") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].href"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].action") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].action"), instanceOf(String.class));  
+          }
+    
+              if (response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].types") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("laureate.nobelPrizes[" + i + "].links[" + i1 + "].types"), instanceOf(String.class));  
+          }
+    
+                  }  
+                MatcherAssert.assertThat(response.jsonPath().getList("laureate.nobelPrizes[" + i + "].links"), instanceOf(List.class));
   
           }
     
