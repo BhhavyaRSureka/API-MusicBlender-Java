@@ -32,7 +32,7 @@ public class zoekenGetTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\zoekenGetTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/zoekenGetTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -48,9 +48,6 @@ public class zoekenGetTest {
                 
   
                 Response response = given()
-				.pathParam("kvkNummer", map.get("kvkNummer") != null ? map.get("kvkNummer") : "")
-				.pathParam("vestigingsnummer", map.get("vestigingsnummer") != null ? map.get("vestigingsnummer") : "")
-				.pathParam("handelsnaam", map.get("handelsnaam") != null ? map.get("handelsnaam") : "")
 				.header("Token", System.getenv("API_KEY"))
                 .when()
                 .get("/kvk/zoeken")  

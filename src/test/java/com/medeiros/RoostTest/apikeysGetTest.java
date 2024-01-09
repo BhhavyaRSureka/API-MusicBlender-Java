@@ -32,7 +32,7 @@ public class apikeysGetTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\apikeysGetTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/apikeysGetTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -63,12 +63,12 @@ public class apikeysGetTest {
     
               if (response.jsonPath().get("apikeys") != null) {    
                 for (int i = 0; i < response.jsonPath().getList("apikeys").size(); i++) {    
-              if (response.jsonPath().get("apikeys[`"+ i +"`].id") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("apikeys[`"+ i +"`].id"), instanceOf(String.class));  
+              if (response.jsonPath().get("apikeys[" + i + "].id") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("apikeys[" + i + "].id"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("apikeys[`"+ i +"`].createdAt") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("apikeys[`"+ i +"`].createdAt"), instanceOf(String.class));  
+              if (response.jsonPath().get("apikeys[" + i + "].createdAt") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("apikeys[" + i + "].createdAt"), instanceOf(String.class));  
           }
     
                   }  
@@ -98,7 +98,7 @@ if (response.statusCode() == 400) {
           }
     
               if (response.jsonPath().get("value") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("value"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("value"), nullValue());  
           }
     
               if (response.jsonPath().get("field") != null) {
@@ -131,7 +131,7 @@ if (response.statusCode() == 401) {
           }
     
               if (response.jsonPath().get("value") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("value"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("value"), nullValue());  
           }
     
               if (response.jsonPath().get("field") != null) {

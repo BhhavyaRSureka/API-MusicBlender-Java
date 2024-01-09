@@ -32,7 +32,7 @@ public class logoutPostTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\logoutPostTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/logoutPostTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -79,7 +79,7 @@ if (response.statusCode() == 400) {
           }
     
               if (response.jsonPath().get("value") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("value"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("value"), nullValue());  
           }
     
               if (response.jsonPath().get("field") != null) {

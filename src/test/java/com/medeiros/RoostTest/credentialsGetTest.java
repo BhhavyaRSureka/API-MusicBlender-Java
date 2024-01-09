@@ -32,7 +32,7 @@ public class credentialsGetTest {
         RestAssured.baseURI = System.getenv("BASE_URL");  
   
         // Read CSV file  
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\test\java\com\medeiros\RoostTest\credentialsGetTest.csv"))) {  
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/test/java/com/medeiros/RoostTest/credentialsGetTest.csv"))) {  
             String headerLine = reader.readLine();  
             String[] headers = headerLine.split(",");  
   
@@ -48,8 +48,6 @@ public class credentialsGetTest {
                 
   
                 Response response = given()
-				.pathParam("size", map.get("size") != null ? map.get("size") : "")
-				.pathParam("offset", map.get("offset") != null ? map.get("offset") : "")
 				.header("Token", System.getenv("API_KEY"))
                 .when()
                 .get("/credentials")  
@@ -65,32 +63,32 @@ public class credentialsGetTest {
     
               if (response.jsonPath().get("credentials") != null) {    
                 for (int i = 0; i < response.jsonPath().getList("credentials").size(); i++) {    
-              if (response.jsonPath().get("credentials[`"+ i +"`].id") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].id"), instanceOf(String.class));  
+              if (response.jsonPath().get("credentials[" + i + "].id") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].id"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("credentials[`"+ i +"`].format") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].format"), instanceOf(String.class));  
-                MatcherAssert.assertThat(response.jsonPath().getString("credentials[`"+ i +"`].format"), anyOf(equalTo("jwt_vc_json"), equalTo("jwt_vc_json-ld"), equalTo("ldp_vc")));
+              if (response.jsonPath().get("credentials[" + i + "].format") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].format"), instanceOf(String.class));  
+                MatcherAssert.assertThat(response.jsonPath().getString("credentials[" + i + "].format"), anyOf(equalTo("jwt_vc_json"), equalTo("jwt_vc_json-ld"), equalTo("ldp_vc")));
   
           }
     
-              if (response.jsonPath().get("credentials[`"+ i +"`].credential") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].credential"), instanceOf(String.class));  
+              if (response.jsonPath().get("credentials[" + i + "].credential") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].credential"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("credentials[`"+ i +"`].status") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].status"), instanceOf(String.class));  
-                MatcherAssert.assertThat(response.jsonPath().getString("credentials[`"+ i +"`].status"), anyOf(equalTo("active"), equalTo("suspended"), equalTo("revoked"), equalTo("expired"), equalTo("pending")));
+              if (response.jsonPath().get("credentials[" + i + "].status") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].status"), instanceOf(String.class));  
+                MatcherAssert.assertThat(response.jsonPath().getString("credentials[" + i + "].status"), anyOf(equalTo("active"), equalTo("suspended"), equalTo("revoked"), equalTo("expired"), equalTo("pending")));
   
           }
     
-              if (response.jsonPath().get("credentials[`"+ i +"`].statusUpdatedAt") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].statusUpdatedAt"), instanceOf(String.class));  
+              if (response.jsonPath().get("credentials[" + i + "].statusUpdatedAt") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].statusUpdatedAt"), instanceOf(String.class));  
           }
     
-              if (response.jsonPath().get("credentials[`"+ i +"`].createdAt") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("credentials[`"+ i +"`].createdAt"), instanceOf(String.class));  
+              if (response.jsonPath().get("credentials[" + i + "].createdAt") != null) {
+                MatcherAssert.assertThat(response.jsonPath().get("credentials[" + i + "].createdAt"), instanceOf(String.class));  
           }
     
                   }  
@@ -120,7 +118,7 @@ if (response.statusCode() == 400) {
           }
     
               if (response.jsonPath().get("value") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("value"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("value"), nullValue());  
           }
     
               if (response.jsonPath().get("field") != null) {
@@ -153,7 +151,7 @@ if (response.statusCode() == 401) {
           }
     
               if (response.jsonPath().get("value") != null) {
-                MatcherAssert.assertThat(response.jsonPath().get("value"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("value"), nullValue());  
           }
     
               if (response.jsonPath().get("field") != null) {
