@@ -1,0 +1,11 @@
+initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+JD,John,Doe,Smith,1985-07-20,New York,1234567890,johnsmith@gmail.com,10001,123,A,US,001,200
+MJ,Mary,Jane,Watson,1986-05-15,Los Angeles,0987654321,marywatson@gmail.com,90001,456,B,US,002,200
+RP,Robert,Paul,Johnson,1987-08-30,Chicago,1122334455,robertjohnson@gmail.com,60616,789,C,US,003,200
+EB,Emma,Bella,Williams,1988-12-25,Houston,2233445566,emmawilliams@gmail.com,77001,321,D,US,004,200
+AW,Alex,William,Brown,1989-11-10,Phoenix,3344556677,alexbrown@gmail.com,85001,654,E,US,005,200
+NB,Natalie,Bella,Jones,1990-10-05,Philadelphia,4455667788,nataliejones@gmail.com,19019,987,F,US,006,200
+GL,George,Lucas,Miller,1991-09-20,San Antonio,5566778899,georgemiller@gmail.com,78201,147,G,US,007,200
+SB,Sarah,Bella,Davis,1992-08-15,San Diego,6677889900,sarahdavis@gmail.com,92101,258,H,US,008,200
+DL,David,Luke,Garcia,1993-07-30,Dallas,7788990011,davidgarcia@gmail.com,75201,369,I,US,009,200
+MB,Maria,Bella,Rodriguez,1994-06-25,San Jose,8899001122,mariarodriguez@gmail.com,95101,963,J,US,010,200

@@ -1,0 +1,11 @@
+userID,userName,userEmail,userAge,userDOB,userGender,userCountry
+1,JohnDoe,johndoe@example.com,35,1986-03-15,Male,USA
+2,JaneDoe,janedoe@example.com,30,1991-04-10,Female,Canada
+3,RobertSmith,robertsmith@example.com,28,1993-02-20,Male,Australia
+4,EmilyJohnson,emilyjohnson@example.com,32,1989-07-25,Female,UK
+5,MichaelBrown,michaelbrown@example.com,27,1994-08-15,Male,USA
+6,SarahMiller,sarahmiller@example.com,33,1988-11-30,Female,Canada
+7,JamesDavis,jamesdavis@example.com,29,1992-05-10,Male,Australia
+8,JenniferWilson,jenniferwilson@example.com,31,1990-09-20,Female,UK
+9,DavidJones,davidjones@example.com,34,1987-12-15,Male,USA
+10,EmmaMoore,emmamoore@example.com,36,1985-06-05,Female,Canada
