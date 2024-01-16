@@ -1,0 +1,11 @@
+commit-hash,email,statusCode
+6dcd4ce23d88e2ee95838f7b014b6284,johndoe@example.com,200
+b2d2b2d2b2d2d2d2d2d2d2d2d2d2d2d2,janedoe@example.com,404
+c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3,bob@example.com,500
+d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4,alice@example.com,302
+e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5,charlie@example.com,403
+f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6,david@example.com,201
+a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7,emma@example.com,400
+8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b,frank@example.com,301
+9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c,grace@example.com,202
+0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0,harry@example.com,404
