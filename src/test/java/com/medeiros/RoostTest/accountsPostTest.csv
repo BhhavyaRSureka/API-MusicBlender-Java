@@ -1,0 +1,11 @@
+commit-hash,email,statusCode
+6dcd4ce23d88e2ee95838f7b014b6284f, john.doe@gmail.com,200
+b80812004c271be3aee6d36b39e3b5a6a,emma.brown@yahoo.com,404
+d9b1d7db4cd6e70935368a1efb10e377e,james.white@outlook.com,500
+e99a18c428cb38d5f260853678922e03d,mary.johnson@hotmail.com,200
+7c4a8d09ca3762af61e59520943dc2649,patricia.williams@icloud.com,404
+9f61408e3afb633e50cdf1b20de6f466d,jennifer.jones@gmail.com,200
+25f9e794323b453885f5181f1b624d0b3,michael.brown@yahoo.com,500
+c4ca4238a0b923820dcc509a6f75849b0,elizabeth.taylor@outlook.com,200
+c81e728d9d4c2f636f067f89cc14862c1,david.moore@hotmail.com,404
+eccbc87e4b5ce2fe28308fd9f2a7baf3b,linda.smith@icloud.com,200
