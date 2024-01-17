@@ -1,0 +1,11 @@
+koreUserId,botId,userCode,accountId,Authorization,customerId,status,statusCode
+abc123,bot01,uc01,acc01,auth01,cust01,active,200
+def456,bot02,uc02,acc02,auth02,cust02,inactive,400
+ghi789,bot03,uc03,acc03,auth03,cust03,active,200
+jkl012,bot04,uc04,acc04,auth04,cust04,inactive,400
+mno345,bot05,uc05,acc05,auth05,cust05,active,200
+pqr678,bot06,uc06,acc06,auth06,cust06,inactive,400
+stu901,bot07,uc07,acc07,auth07,cust07,active,200
+vwx234,bot08,uc08,acc08,auth08,cust08,inactive,400
+yz1234,bot09,uc09,acc09,auth09,cust09,active,200
+abc567,bot10,uc10,acc10,auth10,cust10,inactive,400

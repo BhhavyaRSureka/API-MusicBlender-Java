@@ -1,0 +1,11 @@
+botId,accountId,Authorization,sourcePin,targetPin,profileInfo,statusCode
+bot001,acc001,auth001,1234,5678,John Doe,200
+bot002,acc002,auth002,2345,6789,Jane Smith,200
+bot003,acc003,auth003,3456,7890,Robert Johnson,200
+bot004,acc004,auth004,4567,8901,Julia Davis,200
+bot005,acc005,auth005,5678,9012,Clara Wilson,200
+bot006,acc006,auth006,6789,0123,James Martin,200
+bot007,acc007,auth007,7890,1234,Emma Thompson,200
+bot008,acc008,auth008,8901,2345,George Robinson,200
+bot009,acc009,auth009,9012,3456,Alice Hall,200
+bot010,acc010,auth010,0123,4567,Michael Clark,200
