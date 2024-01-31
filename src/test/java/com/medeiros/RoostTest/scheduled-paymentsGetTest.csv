@@ -1,0 +1,11 @@
+x-fapi-financial-id,x-fapi-customer-last-logged-time,x-fapi-customer-ip-address,x-fapi-interaction-id,Authorization,x-customer-user-agent,statusCode
+FID123,Wed, 20 Oct 2021 08:30:00 GMT,192.168.1.1,ID789,AuthKey123,Chrome,200
+FID456,Thu, 21 Oct 2021 09:45:30 GMT,192.168.1.2,ID456,AuthKey456,Firefox,401
+FID789,Fri, 22 Oct 2021 10:00:00 GMT,192.168.1.3,ID123,AuthKey789,Edge,403
+FID321,Sat, 23 Oct 2021 11:15:00 GMT,192.168.1.4,ID654,AuthKey321,Safari,404
+FID654,Sun, 24 Oct 2021 12:30:30 GMT,192.168.1.5,ID987,AuthKey654,Opera,405
+FID987,Mon, 25 Oct 2021 13:45:00 GMT,192.168.1.6,ID321,AuthKey987,Chrome,406
+FID135,Tue, 26 Oct 2021 14:00:30 GMT,192.168.1.7,ID213,AuthKey135,Firefox,429
+FID246,Wed, 27 Oct 2021 15:15:00 GMT,192.168.1.8,ID546,AuthKey246,Edge,500
+FID357,Thu, 28 Oct 2021 16:30:30 GMT,192.168.1.9,ID879,AuthKey357,Safari,200
+FID468,Fri, 29 Oct 2021 17:45:00 GMT,192.168.1.10,ID789,AuthKey468,Opera,400
