@@ -51,7 +51,11 @@ public class fileGetTest {
                 }  
                 
   
-                Response response = given()undefined
+                Response response = given()
+                .pathParam("AccountId", map.get("AccountId") != null ? map.get("AccountId") : "") 
+    .pathParam("StatementId", map.get("StatementId") != null ? map.get("StatementId") : "")
+    .header("Authorization", "Bearer " + System.getenv("BEARER_TOKEN"))
+    .header("x-fapi-financial-id", map.get("x-fapi-financial-id") != null ? map.get("x-fapi-financial-id") : "")
                 .when()
                 .get("/accounts/{AccountId}/statements/{StatementId}/file")  
                 .then() 
