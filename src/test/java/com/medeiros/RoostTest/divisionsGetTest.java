@@ -52,7 +52,7 @@ public class divisionsGetTest {
                 
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
 				.header("Authorization", "Bearer " + System.getenv("AUTH_TOKEN"))
                 .when()
                 .get("/api/customer/divisions")  
