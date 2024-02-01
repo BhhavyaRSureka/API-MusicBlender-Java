@@ -52,11 +52,7 @@ public class articleGroupsGetTest {
                 
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("from", map.get("from") != null ? map.get("from") : "")
-				.pathParam("offset", map.get("offset") != null ? map.get("offset") : "")
-				.pathParam("limit", map.get("limit") != null ? map.get("limit") : "")
-				.pathParam("merchant", map.get("merchant") != null ? map.get("merchant") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
 				.header("Authorization", "Bearer " + System.getenv("AUTH_TOKEN"))
                 .when()
                 .get("/api/customer/articleGroups")  
