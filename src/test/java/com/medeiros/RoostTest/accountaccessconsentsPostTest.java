@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
+import java.util.Arrays;
 import org.hamcrest.MatcherAssert;
 import static org.hamcrest.Matchers.*;
 import org.slf4j.Logger;
@@ -51,11 +52,23 @@ public class accountaccessconsentsPostTest {
                 }  
                 
   
-                Response response = given()undefined
-                .when()
-                .post("/account-access-consents")  
-                .then() 
-                .extract().response();    
+                Response response = given()
+    .header("x-fapi-financial-id", map.get("x-fapi-financial-id") != null ? map.get("x-fapi-financial-id") : "")
+    .header("Authorization", "Bearer " + System.getenv("BEARER_TOKEN"))
+    .contentType(ContentType.JSON) // Set content type to JSON
+    .body("{ \"Data\": { \"Permissions\": " +
+         (map.get("Permissions") != null ? "[\"" + map.get("Permissions") + "\"]" : "[]") +
+         " }, \"Risk\": {} }")
+    .when()
+    .post("/account-access-consents")
+    .then()
+    // Add your assertions or further processing here
+    .extract()
+    .response();
+
+
+
+    
          
                 if (response.statusCode() == 201) {
 					System.out.println("Description: Account Access Consents Created");

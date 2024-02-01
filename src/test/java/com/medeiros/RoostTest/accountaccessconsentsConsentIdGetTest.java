@@ -51,7 +51,10 @@ public class accountaccessconsentsConsentIdGetTest {
                 }  
                 
   
-                Response response = given()undefined
+                Response response = given()
+                .pathParam("ConsentId", map.get("ConsentId") != null ? map.get("ConsentId") : "")
+                .header("x-fapi-financial-id", map.get("x-fapi-financial-id") != null ? map.get("x-fapi-financial-id") : "")
+    .header("Authorization", "Bearer " + System.getenv("BEARER_TOKEN"))
                 .when()
                 .get("/account-access-consents/{ConsentId}")  
                 .then() 
