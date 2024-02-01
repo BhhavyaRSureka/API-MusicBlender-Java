@@ -1,0 +1,11 @@
+Data,Permissions,ExpirationDateTime,TransactionFromDateTime,TransactionToDateTime,Risk,x-fapi-financial-id,x-fapi-customer-last-logged-time,x-fapi-customer-ip-address,x-fapi-interaction-id,Authorization,x-customer-user-agent,statusCode
+{data1},[permission1],2021-12-01T12:00:00,2021-11-01T12:00:00,2021-11-02T12:00:00,{risk1},fin-id1,Mon, 01 Jan 2021 12:00:00 GMT,192.168.0.1,interaction-id1,auth-token1,user-agent1,201
+{data2},[permission2],2022-01-01T12:00:00,2021-12-01T12:00:00,2021-12-02T12:00:00,{risk2},fin-id2,Tue, 02 Feb 2021 12:00:00 GMT,192.168.0.2,interaction-id2,auth-token2,user-agent2,400
+{data3},[permission3],2022-02-01T12:00:00,2022-01-01T12:00:00,2022-01-02T12:00:00,{risk3},fin-id3,Wed, 03 Mar 2021 12:00:00 GMT,192.168.0.3,interaction-id3,auth-token3,user-agent3,401
+{data4},[permission4],2022-03-01T12:00:00,2022-02-01T12:00:00,2022-02-02T12:00:00,{risk4},fin-id4,Thu, 04 Apr 2021 12:00:00 GMT,192.168.0.4,interaction-id4,auth-token4,user-agent4,403
+{data5},[permission5],2022-04-01T12:00:00,2022-03-01T12:00:00,2022-03-02T12:00:00,{risk5},fin-id5,Fri, 05 May 2021 12:00:00 GMT,192.168.0.5,interaction-id5,auth-token5,user-agent5,404
+{data6},[permission6],2022-05-01T12:00:00,2022-04-01T12:00:00,2022-04-02T12:00:00,{risk6},fin-id6,Sat, 06 Jun 2021 12:00:00 GMT,192.168.0.6,interaction-id6,auth-token6,user-agent6,405
+{data7},[permission7],2022-06-01T12:00:00,2022-05-01T12:00:00,2022-05-02T12:00:00,{risk7},fin-id7,Sun, 07 Jul 2021 12:00:00 GMT,192.168.0.7,interaction-id7,auth-token7,user-agent7,406
+{data8},[permission8],2022-07-01T12:00:00,2022-06-01T12:00:00,2022-06-02T12:00:00,{risk8},fin-id8,Mon, 08 Aug 2021 12:00:00 GMT,192.168.0.8,interaction-id8,auth-token8,user-agent8,415
+{data9},[permission9],2022-08-01T12:00:00,2022-07-01T12:00:00,2022-07-02T12:00:00,{risk9},fin-id9,Tue, 09 Sep 2021 12:00:00 GMT,192.168.0.9,interaction-id9,auth-token9,user-agent9,429
+{data10},[permission10],2022-09-01T12:00:00,2022-08-01T12:00:00,2022-08-02T12:00:00,{risk10},fin-id10,Wed, 10 Oct 2021 12:00:00 GMT,192.168.0.10,interaction-id10,auth-token10,user-agent10,500
