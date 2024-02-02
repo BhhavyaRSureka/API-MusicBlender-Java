@@ -49,8 +49,8 @@ public class restaurantTableGroupsGetTest {
           RestAssured.baseURI = map.get("BASE_URL");  
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("pointOfSaleId", map.get("pointOfSaleId") != null ? map.get("pointOfSaleId") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("pointOfSaleId", map.get("pointOfSaleId") != null ? map.get("pointOfSaleId") : "")
 				.header("Authorization", "Bearer " + map.get("AUTH_TOKEN"))
                 .when()
                 .get("/api/customer/pointOfSale/restaurantTableGroups")  
