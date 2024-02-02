@@ -55,7 +55,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.0</version>
+      <version>5.10.1</version>
       <scope>test</scope>
       <!--Dependency added by RoostGPT-->
     </dependency>
@@ -76,14 +76,14 @@
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
-      <version>4.3.1</version>
+      <version>5.4.0</version>
       <scope>compile</scope>
       <!--Dependency added by RoostGPT-->
     </dependency>
     <dependency>
-      <groupId>org.junit</groupId>
+      <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <version>4.13.2</version>
       <scope>compile</scope>
       <!--Dependency added by RoostGPT-->
     </dependency>

@@ -52,11 +52,10 @@ public class createPostTest {
                 
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("tableGroupId", map.get("tableGroupId") != null ? map.get("tableGroupId") : "")
-				.pathParam("number", map.get("number") != null ? map.get("number") : "")
-				.pathParam("name", map.get("name") != null ? map.get("name") : "")
-				.pathParam("externalId", map.get("externalId") != null ? map.get("externalId") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("tableGroupId", map.get("tableGroupId") != null ? map.get("tableGroupId") : "")
+				.queryParam("number", map.get("number") != null ? map.get("number") : "")
+				.queryParam("name", map.get("name") != null ? map.get("name") : "")
 				.header("Authorization", "Bearer " + System.getenv("AUTH_TOKEN"))
                 .when()
                 .post("/api/customer/restaurantTable/create")  

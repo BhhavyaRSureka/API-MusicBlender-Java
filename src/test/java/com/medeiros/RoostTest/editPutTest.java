@@ -52,10 +52,8 @@ public class editPutTest {
                 
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("tableId", map.get("tableId") != null ? map.get("tableId") : "")
-				.pathParam("number", map.get("number") != null ? map.get("number") : "")
-				.pathParam("name", map.get("name") != null ? map.get("name") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("tableId", map.get("tableId") != null ? map.get("tableId") : "")
 				.header("Authorization", "Bearer " + System.getenv("AUTH_TOKEN"))
                 .when()
                 .put("/api/customer/restaurantTable/edit")  
