@@ -49,8 +49,8 @@ public class archivePostTest {
           RestAssured.baseURI = map.get("BASE_URL");  
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("tableGroupId", map.get("tableGroupId") != null ? map.get("tableGroupId") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("tableGroupId", map.get("tableGroupId") != null ? map.get("tableGroupId") : "")
 				.header("Authorization", "Bearer " + map.get("AUTH_TOKEN"))
                 .when()
                 .post("/api/customer/restaurantTableGroup/archive")  
@@ -61,7 +61,7 @@ public class archivePostTest {
 					System.out.println("Description: Archive Restaurant Table Group");
       
               if (response.jsonPath().get("entries") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().get("entries"), instanceOf(undefined.class));  
+                MatcherAssert.assertThat(response.jsonPath().get("entries"), is(nullValue()));  
           }
 				}
   
