@@ -49,7 +49,7 @@ public class companyGetTest {
           RestAssured.baseURI = map.get("BASE_URL");  
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
 				.header("Authorization", "Bearer " + map.get("AUTH_TOKEN"))
                 .when()
                 .get("/api/customer/company")  
