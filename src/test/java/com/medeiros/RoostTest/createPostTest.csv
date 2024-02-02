@@ -1,0 +1,11 @@
+company,email,first_name,last_name,address,zip_code,city,iban,phone_number,description,external_id,statusCode
+23456,john.doe@example.com,John,Doe,123 Main St,90210,Beverly Hills,GB29NWBK60161331926819,5551234567,This is a description,1,200
+34567,jane.doe@example.com,Jane,Doe,456 Oak St,10001,New York,DE75512108001245126199,5559876543,This is another description,2,200
+45678,bob.smith@example.com,Bob,Smith,789 Pine St,94101,San Francisco,FR7630006000011234567890189,5552468135,This is yet another description,3,200
+56789,alice.johnson@example.com,Alice,Johnson,321 Birch St,60601,Chicago,GR1601101250000000012300695,5551357924,This is a different description,4,200
+67890,charlie.brown@example.com,Charlie,Brown,654 Elm St,98101,Seattle,GB33BUKB20201555555555,5558642093,This is a unique description,5,200
+78901,david.jones@example.com,David,Jones,987 Spruce St,33101,Miami,SA0380000000608010167519,5555791324,This is a varied description,6,200
+89012,emma.williams@example.com,Emma,Williams,234 Cedar St,77001,Houston,CH9300762011623852957,5554928671,This is a singular description,7,200
+90123,frank.thomas@example.com,Frank,Thomas,567 Redwood St,85001,Phoenix,TR330006100519786457841326,5553069581,This is a distinct description,8,200
+12345,grace.martin@example.com,Grace,Martin,890 Aspen St,30301,Atlanta,AE070331234567890123456,5559182736,This is a special description,9,200
+23456,harry.wilson@example.com,Harry,Wilson,123 Cypress St,02101,Boston,GB29RBOS60161331926819,5557531594,This is a particular description,10,200
