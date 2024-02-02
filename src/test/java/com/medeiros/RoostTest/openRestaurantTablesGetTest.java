@@ -49,9 +49,9 @@ public class openRestaurantTablesGetTest {
           RestAssured.baseURI = map.get("BASE_URL");  
   
                 Response response = given()
-				.pathParam("company", map.get("company") != null ? map.get("company") : "")
-				.pathParam("RestaurantTableGroupId", map.get("RestaurantTableGroupId") != null ? map.get("RestaurantTableGroupId") : "")
-				.pathParam("pointOfSaleId", map.get("pointOfSaleId") != null ? map.get("pointOfSaleId") : "")
+				.queryParam("company", map.get("company") != null ? map.get("company") : "")
+				.queryParam("RestaurantTableGroupId", map.get("RestaurantTableGroupId") != null ? map.get("RestaurantTableGroupId") : "")
+				.queryParams("pointOfSaleId", map.get("pointOfSaleId") != null ? map.get("pointOfSaleId") : "")
 				.header("Authorization", "Bearer " + map.get("AUTH_TOKEN"))
                 .when()
                 .get("/api/customer/openRestaurantTables")  
@@ -61,12 +61,12 @@ public class openRestaurantTablesGetTest {
                 if (response.statusCode() == 200) {
 					System.out.println("Description: Return All Open Restaurant Tables from a Point of Sale");
       
-              if (response.jsonPath().get("id") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().get("id"), instanceOf(Integer.class));  
+              if (response.jsonPath().getList("id").get(0) != null) {  
+                MatcherAssert.assertThat(response.jsonPath().getList("id").get(0), instanceOf(Integer.class));  
           }
       
-              if (response.jsonPath().get("restaurant_table_id") != null) {  
-                MatcherAssert.assertThat(response.jsonPath().get("restaurant_table_id"), instanceOf(Integer.class));  
+              if (response.jsonPath().getList("restaurant_table_id").get(0) != null) {  
+                MatcherAssert.assertThat(response.jsonPath().getList("restaurant_table_id").get(0), instanceOf(Integer.class));  
           }
 				}
   
